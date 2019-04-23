@@ -1,3 +1,5 @@
+`deployftp_sync.py`Script sync changes between commit and remote repository on ftp server
+
 ## Prerequests
 
 * Python 3
@@ -11,11 +13,11 @@ Config using static variables at the beginning of script:
 | Name              | Description                                                                   |
 |-------------------|-------------------------------------------------------------------------------|
 | GIT_PATH          | Git system path (check command `whereis git`, default `/usr/bin/git` or `git`)|
-| GIT_DEPLOY_BRANCH | Deploy branch                                                                 |
-| IGNORE_FILE       | ftpignore filename (default ftpignore)                                        |
+| GIT_DEPLOY_BRANCH | Deploy branch                                                                 |                                     |
+| GIT_REMOTE_NAME   | Remote name - default 'origin'
 | SOURCE_DIR        | Source main project directory                                                 |
 | FTP_SERVER        | FTP server address                                                            |
-| FTP_PORT =        | Port (default 21)                                                             |
+| FTP_PORT          | Port (default 21)                                                             |
 | FTP_USERNAME      | FTP server username                                                           |
 | FTP_PASSWORD      | FTP server password                                                           |
 -----------------------------------------------------------------------------------------------------
@@ -35,6 +37,3 @@ Config using static variables at the beginning of script:
 Now, if you push  changes, the `deploy_ftp.py` script run and do the job
 If you want , you can edit before transfer function to make some project builds etc before send files to ftp
 
-## ftpignore
-
-If you want exclude some files from deploy file list you can write file/directory paths into `.ftpignore`
