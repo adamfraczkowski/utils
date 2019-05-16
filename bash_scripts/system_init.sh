@@ -85,3 +85,4 @@ npm install vue
 npm install -g @vue/cli
 add-apt-repository multiverse && sudo apt-get update
 apt-get install -y virtualbox
+apt-get install gparted
